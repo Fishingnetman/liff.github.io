@@ -80,18 +80,17 @@
       alert("getUserProfile work")
     }
 
-    function getEnvironment() {
+    
+
+    async function main() {
+      await liff.init({ liffId: "2005482505-Ov6g2J0P" })
+
       document.getElementById("os").append(liff.getOs())
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
       document.getElementById("accessToken").append(liff.getAccessToken())
       document.getElementById("isInClient").append(liff.isInClient())
-      alert("enviroment work")
-    }
-
-    async function main() {
-      await liff.init({ liffId: "2005482505-Ov6g2J0P" })
-      getEnvironment()
+      
       getUserProfile()
       getContext()
       getFriendship()
