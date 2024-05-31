@@ -46,6 +46,7 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     function createUniversalLink() {
+      alert("createUniversalLink work")
     }
 
     async function shareMsg() {
@@ -64,9 +65,11 @@
     }
 
     async function getFriendship() {
+      alert("getFriendship work")
     }
 
     async function sendMsg() {
+
     }
 
     function getContext() {
@@ -91,8 +94,8 @@
       getEnvironment()
       getUserProfile()
       getContext()
-      // getFriendship()
-      // createUniversalLink()
+      getFriendship()
+      createUniversalLink()
     }
     main()
   </script>
