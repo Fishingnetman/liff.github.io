@@ -65,7 +65,13 @@
     }
 
     async function getFriendship() {
-      alert("getFriendship work")
+      const friend = await liff.getFriendship()
+      document.getElementById("friendship").append(friend.friendFlag)
+      if(!friend.friendFlag){
+        if(confirm("no bot friend yet")){
+          window.location = "https://lin.ee/vz8gszm"
+        }
+      }
     }
 
     async function sendMsg() {
