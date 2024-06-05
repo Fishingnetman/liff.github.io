@@ -46,7 +46,6 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     function createUniversalLink() {
-      alert("createUniversalLink work")
     }
 
     async function shareMsg() {
@@ -65,6 +64,7 @@
     }
 
     async function getFriendship() {
+      alert("friend function work")
       const friend = await liff.getFriendship()
       document.getElementById("friendship").append(friend.friendFlag)
       if(!friend.friendFlag){
@@ -123,7 +123,7 @@
     
 
     async function main() {
-      alert("v0.3 friendship test")
+      alert("v0.4 friendship test")
       await liff.init({ liffId: "2005482505-Ov6g2J0P" })
       getEnvironment()
       getUserProfile()
